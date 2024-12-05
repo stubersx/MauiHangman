@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiHangman.MainPage"
+             Background="Black">
+
+    <StackLayout Padding="120">
+        <!-- Title -->
+        <Label Text="Hangman Game" FontSize="32" HorizontalOptions="Center" FontFamily="FrederickatheGreat-Regular.ttf" TextColor="White" />
+
+        <!-- Hangman Image (will change based on incorrect guesses) -->
+        <Image x:Name="HangmanImage" HeightRequest="200" HorizontalOptions="Center" Background="White" Margin="0,30" />
+        
+        <!-- Display Current Word -->
+        <Label x:Name="WordDisplay" FontSize="28" HorizontalOptions="Center" TextColor="White" Margin="0,0,0,10" />
+
+        <!-- Display Remaining Attempts -->
+        <Label x:Name="AttemptsLabel" Text="Attempts left: 6" FontSize="18" HorizontalOptions="Center" TextColor="White" />
+
+        <!-- Display Used Letters -->
+        <Label Text="Guessed Letters:" FontSize="18" HorizontalOptions="Center" TextColor="White" />
+        <Label x:Name="GuessedLettersLabel" FontSize="18" HorizontalOptions="Center" TextColor="White" />
+
+        <!-- Keyboard for guessing letters -->
+        <FlexLayout x:Name="LetterGrid" Wrap="Wrap" JustifyContent="Center" Padding="10" Margin="0,20">
+            <!-- Generate buttons A to Z -->
+            <Button Text="A" Clicked="LetterButton_Clicked" Background="White" TextColor="Maroon" FontSize="20" FontFamily="FrederickatheGreat-Regular.ttf" Margin="0,0,1,0" />
+            <Button Text="B" Clicked="LetterButton_Clicked" Background="White" TextColor="Maroon" FontSize="20" FontFamily="FrederickatheGreat-Regular.ttf" Margin="0,0,1,0" />
+            <Button Text="C" Clicked="LetterButton_Clicked" Background="White" TextColor="Maroon" FontSize="20" FontFamily="FrederickatheGreat-Regular.ttf" Margin="0,0,1,0" />
+            <Button Text="D" Clicked="LetterButton_Clicked" Background="White" TextColor="Maroon" FontSize="20" FontFamily="FrederickatheGreat-Regular.ttf" Margin="0,0,1,0" />
+            <Button Text="E" Clicked="LetterButton_Clicked" Background="White" TextColor="Maroon" FontSize="20" FontFamily="FrederickatheGreat-Regular.ttf" Margin="0,0,1,0" />
+            <Button Text="F" Clicked="LetterButton_Clicked" Background="White" TextColor="Maroon" FontSize="20" FontFamily="FrederickatheGreat-Regular.ttf" Margin="0,0,1,0" />
+            <Button Text="G" Clicked="LetterButton_Clicked" Background="White" TextColor="Maroon" FontSize="20" FontFamily="FrederickatheGreat-Regular.ttf" Margin="0,0,1,0" />
+            <Button Text="H" Clicked="LetterButton_Clicked" Background="White" TextColor="Maroon" FontSize="20" FontFamily="FrederickatheGreat-Regular.ttf" Margin="0,0,1,0" />
+            <Button Text="I" Clicked="LetterButton_Clicked" Background="White" TextColor="Maroon" FontSize="20" FontFamily="FrederickatheGreat-Regular.ttf" Margin="0,0,1,0" />
+            <Button Text="J" Clicked="LetterButton_Clicked" Background="White" TextColor="Maroon" FontSize="20" FontFamily="FrederickatheGreat-Regular.ttf" Margin="0,0,1,0" />
+            <Button Text="K" Clicked="LetterButton_Clicked" Background="White" TextColor="Maroon" FontSize="20" FontFamily="FrederickatheGreat-Regular.ttf" Margin="0,0,1,0" />
+            <Button Text="L" Clicked="LetterButton_Clicked" Background="White" TextColor="Maroon" FontSize="20" FontFamily="FrederickatheGreat-Regular.ttf" Margin="0,0,1,0" />
+            <Button Text="M" Clicked="LetterButton_Clicked" Background="White" TextColor="Maroon" FontSize="20" FontFamily="FrederickatheGreat-Regular.ttf" Margin="0,0,1,0" />
+            <Button Text="N" Clicked="LetterButton_Clicked" Background="White" TextColor="Maroon" FontSize="20" FontFamily="FrederickatheGreat-Regular.ttf" Margin="0,0,1,0" />
+            <Button Text="O" Clicked="LetterButton_Clicked" Background="White" TextColor="Maroon" FontSize="20" FontFamily="FrederickatheGreat-Regular.ttf" Margin="0,0,1,0" />
+            <Button Text="P" Clicked="LetterButton_Clicked" Background="White" TextColor="Maroon" FontSize="20" FontFamily="FrederickatheGreat-Regular.ttf" Margin="0,0,1,0" />
+            <Button Text="Q" Clicked="LetterButton_Clicked" Background="White" TextColor="Maroon" FontSize="20" FontFamily="FrederickatheGreat-Regular.ttf" Margin="0,0,1,0" />
+            <Button Text="R" Clicked="LetterButton_Clicked" Background="White" TextColor="Maroon" FontSize="20" FontFamily="FrederickatheGreat-Regular.ttf" Margin="0,0,1,0" />
+            <Button Text="S" Clicked="LetterButton_Clicked" Background="White" TextColor="Maroon" FontSize="20" FontFamily="FrederickatheGreat-Regular.ttf" Margin="0,0,1,0" />
+            <Button Text="T" Clicked="LetterButton_Clicked" Background="White" TextColor="Maroon" FontSize="20" FontFamily="FrederickatheGreat-Regular.ttf" Margin="0,0,1,0" />
+            <Button Text="U" Clicked="LetterButton_Clicked" Background="White" TextColor="Maroon" FontSize="20" FontFamily="FrederickatheGreat-Regular.ttf" Margin="0,0,1,0" />
+            <Button Text="V" Clicked="LetterButton_Clicked" Background="White" TextColor="Maroon" FontSize="20" FontFamily="FrederickatheGreat-Regular.ttf" Margin="0,0,1,0" />
+            <Button Text="W" Clicked="LetterButton_Clicked" Background="White" TextColor="Maroon" FontSize="20" FontFamily="FrederickatheGreat-Regular.ttf" Margin="0,0,1,0" />
+            <Button Text="X" Clicked="LetterButton_Clicked" Background="White" TextColor="Maroon" FontSize="20" FontFamily="FrederickatheGreat-Regular.ttf" Margin="0,0,1,0" />
+            <Button Text="Y" Clicked="LetterButton_Clicked" Background="White" TextColor="Maroon" FontSize="20" FontFamily="FrederickatheGreat-Regular.ttf" Margin="0,0,1,0" />
+            <Button Text="Z" Clicked="LetterButton_Clicked" Background="White" TextColor="Maroon" FontSize="20" FontFamily="FrederickatheGreat-Regular.ttf" Margin="0,0,1,0" />
+        </FlexLayout>
+
+        <!-- Game Over Message -->
+        <Label x:Name="GameOverMessage" FontSize="24" HorizontalOptions="Center" IsVisible="False" FontFamily="FrederickatheGreat-Regular.ttf" TextColor="White" />
+        
+        <!-- Play Again Button (initially hidden) -->
+        <Button x:Name="PlayAgainButton" Text="Play Again" IsVisible="False" Clicked="PlayAgainButton_Clicked" Background="White" TextColor="Blue" Margin="0,50,0,0" WidthRequest="150" FontFamily="FrederickatheGreat-Regular.ttf" />
+        
+    </StackLayout>
+
+</ContentPage>
